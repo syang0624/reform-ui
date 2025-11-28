@@ -146,7 +146,7 @@ function App() {
                   <Checkbox
                     id="terms"
                     checked={isChecked}
-                    onCheckedChange={(checked) => setIsChecked(checked as boolean)}
+                    onCheckedChange={(checked: boolean) => setIsChecked(checked)}
                   />
                   <Label htmlFor="terms">Accept terms and conditions</Label>
                 </div>

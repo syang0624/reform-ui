@@ -26,10 +26,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: demo/package-lock.json
 
-      - name: Install dependencies
+      - name: Install main package dependencies
+        run: npm ci
+
+      - name: Build main package
+        run: npm run build
+
+      - name: Install demo dependencies
         run: cd demo && npm ci
 
       - name: Build demo
