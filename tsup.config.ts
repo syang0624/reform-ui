@@ -11,7 +11,16 @@ export default defineConfig({
   splitting: false,
   sourcemap: true,
   clean: true,
-  external: ['react', 'react-dom', 'tailwindcss'],
+  external: [
+    'react',
+    'react-dom',
+    'react/jsx-runtime',
+    'tailwindcss',
+    'framer-motion',
+    'next-themes',
+    'sonner',
+    '@radix-ui/react-icons',
+  ],
   treeshake: true,
   minify: false,
   // Copy CSS file to dist

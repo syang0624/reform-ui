@@ -1,5 +1,5 @@
 {
-  "name": "@reform-party/ui",
+  "name": "@reform-ui/ui",
   "version": "1.0.0",
   "description": "Reform Party UI Component Library - A comprehensive React component library with Tailwind CSS",
   "main": "./dist/index.js",
@@ -7,20 +7,20 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js"
     },
     "./styles": "./dist/styles.css",
     "./colors": {
+      "types": "./dist/colors.d.ts",
       "import": "./dist/colors.mjs",
-      "require": "./dist/colors.js",
-      "types": "./dist/colors.d.ts"
+      "require": "./dist/colors.js"
     },
     "./tailwind": {
+      "types": "./dist/tailwind.d.ts",
       "import": "./dist/tailwind.mjs",
-      "require": "./dist/tailwind.js",
-      "types": "./dist/tailwind.d.ts"
+      "require": "./dist/tailwind.js"
     }
   },
   "files": [
@@ -42,7 +42,7 @@
     "reform-party",
     "design-system"
   ],
-  "author": "Reform Party",
+  "author": "Steven Yang <stevenyang.dev@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
     "react": "^18.0.0",
@@ -55,6 +55,7 @@
     "@radix-ui/react-checkbox": "^1.1.3",
     "@radix-ui/react-dialog": "^1.1.4",
     "@radix-ui/react-dropdown-menu": "^2.1.4",
+    "@radix-ui/react-icons": "^1.3.2",
     "@radix-ui/react-label": "^2.1.1",
     "@radix-ui/react-progress": "^1.1.1",
     "@radix-ui/react-radio-group": "^1.2.2",
@@ -66,12 +67,15 @@
     "@radix-ui/react-tabs": "^1.1.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "framer-motion": "^11.11.17",
     "lucide-react": "^0.468.0",
+    "next-themes": "^0.4.4",
     "sonner": "^1.7.1",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@types/node": "^22.10.2",
     "@types/react": "^18.3.0",
     "@types/react-dom": "^18.3.0",
     "tsup": "^8.3.5",

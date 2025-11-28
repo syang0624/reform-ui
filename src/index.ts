@@ -108,16 +108,12 @@ export {
 } from "./components/table";
 export { Tabs, TabsList, TabsTrigger, TabsContent } from "./components/tabs";
 export { Textarea } from "./components/textarea";
-export { Toaster, toast } from "./components/sonner";
+export { Toaster } from "./components/sonner";
+export { toast } from "sonner";
 export {
-  Toast,
-  ToastAction,
-  ToastClose,
-  ToastDescription,
-  ToastProvider,
-  ToastTitle,
-  ToastViewport,
+  ToastItem,
+  ToastContainer,
 } from "./components/toast";
 
 // Re-export types
-export type { ToastActionElement, ToastProps } from "./components/toast";
+export type { Toast, ToastType } from "./components/toast";

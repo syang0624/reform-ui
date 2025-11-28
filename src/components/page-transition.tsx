@@ -1,11 +1,16 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { usePathname } from "next/navigation";
 import { ReactNode } from "react";
 
 interface PageTransitionProps {
   children: ReactNode;
+  /**
+   * A unique key to trigger the transition (e.g., current route path or page ID).
+   * In Next.js, you can use: `routeKey={usePathname()}`
+   * In React Router, you can use: `routeKey={location.pathname}`
+   */
+  routeKey?: string;
 }
 
 const pageVariants = {
@@ -31,13 +36,11 @@ const pageVariants = {
   },
 };
 
-export function PageTransition({ children }: PageTransitionProps) {
-  const pathname = usePathname();
-
+export function PageTransition({ children, routeKey }: PageTransitionProps) {
   return (
     <AnimatePresence mode="wait">
       <motion.div
-        key={pathname}
+        key={routeKey}
         initial="initial"
         animate="enter"
         exit="exit"
