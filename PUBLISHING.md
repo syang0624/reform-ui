@@ -68,6 +68,58 @@ npm view reform-ui
 
 Or visit: https://www.npmjs.com/package/reform-ui
 
+## Publishing Workflow When Main Branch is Updated
+
+When you push changes to the `main` branch and want to publish a new version to npm:
+
+```bash
+# 1. Make your changes and test them locally
+npm run build
+cd demo && npm run dev  # Test the demo
+
+# 2. Commit and push your changes
+git add .
+git commit -m "Your changes description"
+git push
+
+# 3. Bump the version (this updates package.json AND creates a git tag)
+npm version patch  # or minor, or major
+
+# 4. Build the package
+npm run build
+
+# 5. Publish to npm
+npm publish
+
+# 6. Push the version bump and tag to GitHub
+git push && git push --tags
+```
+
+### Quick Reference
+
+After main branch updates, run these commands:
+
+```bash
+npm version patch && npm run build && npm publish && git push --tags
+```
+
+This will:
+1. Bump the patch version in package.json
+2. Create a git tag (e.g., v1.0.1)
+3. Build the package
+4. Publish to npm
+5. Push the tag to GitHub
+
+### Creating a GitHub Release (Optional)
+
+After publishing, you can create a GitHub release:
+
+1. Go to your repository on GitHub
+2. Click "Releases" → "Create a new release"
+3. Select the tag you just created (e.g., v1.0.1)
+4. Add release notes describing the changes
+5. Click "Publish release"
+
 ## Deploying Demo to GitHub Pages
 
 The demo website is automatically deployed to GitHub Pages when you push to the `main` branch.
@@ -183,7 +235,7 @@ The demo website is in the `demo` directory. To update it:
 
 - **Authentication Error**: Run `npm login` and try again
 - **Version Already Published**: Bump the version number in `package.json`
-- **Access Denied**: Ensure you have permissions for the @reform-party scope
+- **Access Denied**: Ensure you have permissions for the reform-ui package (check you're logged in with the correct npm account)
 
 ### GitHub Pages Not Updating
 
@@ -201,4 +253,4 @@ The demo website is in the `demo` directory. To update it:
 
 ## Support
 
-For issues and questions, please visit the [GitHub repository](https://github.com/reform-party/ui).
+For issues and questions, please visit the [GitHub repository](https://github.com/syang0624/reform-ui).
