@@ -65,7 +65,7 @@ import {
   TableRow,
   Skeleton,
   Spinner,
-} from '@reform-ui/ui';
+} from 'reform-ui';
 
 function App() {
   const [sliderValue, setSliderValue] = useState([50]);

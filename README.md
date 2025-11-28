@@ -14,11 +14,11 @@ A comprehensive React component library built with Tailwind CSS for the Reform P
 ## Installation
 
 ```bash
-npm install @reform-ui/ui
+npm install reform-ui
 # or
-yarn add @reform-ui/ui
+yarn add reform-ui
 # or
-pnpm add @reform-ui/ui
+pnpm add reform-ui
 ```
 
 ## Quick Start
@@ -29,7 +29,7 @@ Add the Reform Party UI styles to your application:
 
 ```tsx
 // In your root layout or _app file
-import '@reform-ui/ui/styles';
+import 'reform-ui/styles';
 ```
 
 ### 2. Configure Tailwind CSS
@@ -39,14 +39,14 @@ Use the Reform Party preset in your Tailwind configuration:
 ```ts
 // tailwind.config.ts
 import type { Config } from 'tailwindcss';
-import reformPreset from '@reform-ui/ui/tailwind';
+import reformPreset from 'reform-ui/tailwind';
 
 const config: Config = {
   presets: [reformPreset],
   content: [
     './src/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
-    './node_modules/@reform-ui/ui/dist/**/*.{js,mjs}',
+    './node_modules/reform-ui/dist/**/*.{js,mjs}',
   ],
 };
 
@@ -56,7 +56,7 @@ export default config;
 ### 3. Use the components
 
 ```tsx
-import { Button, Card, CardHeader, CardTitle, CardContent } from '@reform-ui/ui';
+import { Button, Card, CardHeader, CardTitle, CardContent } from 'reform-ui';
 
 export default function MyComponent() {
   return (
@@ -118,7 +118,7 @@ Reform Party UI uses a comprehensive color system based on the Reform Party bran
 The primary color is Reform Party Orange (`#FF7210`) with a full range of shades:
 
 ```tsx
-import { reformColors, reformColorsHex } from '@reform-ui/ui/colors';
+import { reformColors, reformColorsHex } from 'reform-ui/colors';
 
 // Use in your code
 const primaryColor = reformColorsHex.primary.DEFAULT; // "#FF7210"
@@ -190,7 +190,7 @@ export default {
 The library includes helpful utility functions:
 
 ```tsx
-import { cn, formatDate, delay, generateId } from '@reform-ui/ui';
+import { cn, formatDate, delay, generateId } from 'reform-ui';
 
 // Merge Tailwind classes
 const className = cn('text-base', 'font-bold', 'text-primary');
@@ -210,7 +210,7 @@ await delay(1000);
 All components are fully typed. Import types as needed:
 
 ```tsx
-import type { ButtonProps } from '@reform-ui/ui';
+import type { ButtonProps } from 'reform-ui';
 
 const MyButton: React.FC<ButtonProps> = (props) => {
   return <Button {...props} />;
@@ -233,7 +233,7 @@ import {
   Input,
   Label,
   Checkbox,
-} from '@reform-ui/ui';
+} from 'reform-ui';
 
 export default function LoginForm() {
   return (
@@ -275,7 +275,7 @@ import {
   DialogTitle,
   DialogTrigger,
   Button,
-} from '@reform-ui/ui';
+} from 'reform-ui';
 
 export default function MyDialog() {
   return (

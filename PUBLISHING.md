@@ -63,10 +63,10 @@ npm publish
 Check that your package is published:
 
 ```bash
-npm view @reform-ui/ui
+npm view reform-ui
 ```
 
-Or visit: https://www.npmjs.com/package/@reform-ui/ui
+Or visit: https://www.npmjs.com/package/reform-ui
 
 ## Deploying Demo to GitHub Pages
 
@@ -98,7 +98,7 @@ Once set up, the demo website will automatically deploy when you:
 The GitHub Actions workflow (`.github/workflows/deploy.yml`) will:
 - Build the demo website
 - Deploy it to GitHub Pages
-- Make it available at: `https://[your-username].github.io/@reform-ui/ui/`
+- Make it available at: `https://[your-username].github.io/reform-ui/`
 
 ### Manual Deployment
 

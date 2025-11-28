@@ -10,11 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@reform-ui/ui": "file:..",
     "framer-motion": "^12.23.24",
     "next-themes": "^0.4.6",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "reform-ui": "file:..",
     "sonner": "^2.0.7"
   },
   "devDependencies": {

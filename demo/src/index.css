@@ -1,4 +1,4 @@
-@import '@reform-ui/ui/styles';
+@import 'reform-ui/styles';
 
 @tailwind base;
 @tailwind components;

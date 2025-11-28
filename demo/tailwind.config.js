@@ -1,4 +1,4 @@
-import reformPreset from '@reform-ui/ui/tailwind';
+import reformPreset from 'reform-ui/tailwind';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -6,6 +6,6 @@ export default {
   content: [
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}',
-    './node_modules/@reform-ui/ui/dist/**/*.{js,mjs}',
+    './node_modules/reform-ui/dist/**/*.{js,mjs}',
   ],
 };
