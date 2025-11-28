@@ -10,52 +10,7 @@ Before publishing, ensure you have:
 2. GitHub repository set up
 3. GitHub Pages enabled in repository settings
 
-## Automatic Publishing (Recommended)
-
-The package is configured to automatically publish to npm whenever the version in `package.json` changes on the `main` branch.
-
-### One-Time Setup
-
-1. **Create an npm Access Token:**
-   - Log in to [npmjs.com](https://www.npmjs.com/)
-   - Go to your profile → Access Tokens
-   - Click "Generate New Token" → "Classic Token"
-   - Select "Automation" type
-   - Copy the token (you won't be able to see it again!)
-
-2. **Add Token to GitHub Secrets:**
-   - Go to your GitHub repository
-   - Navigate to `Settings` → `Secrets and variables` → `Actions`
-   - Click "New repository secret"
-   - Name: `NPM_TOKEN`
-   - Value: Paste your npm access token
-   - Click "Add secret"
-
-### Publishing a New Version
-
-Once set up, publishing is simple:
-
-```bash
-# 1. Make your changes
-# 2. Bump the version
-npm version patch  # or minor, or major
-
-# 3. Commit and push
-git add package.json
-git commit -m "Bump version to 1.0.1"
-git push
-
-# GitHub Actions will automatically:
-# - Build the package
-# - Publish to npm
-# - Create a GitHub release with the version tag
-```
-
-The workflow will only publish when the version number in `package.json` changes, preventing accidental duplicate publishes.
-
-## Manual Publishing to npm
-
-If you prefer to publish manually or need to troubleshoot:
+## Publishing to npm
 
 ### 1. Build the Package
 
@@ -224,25 +179,11 @@ The demo website is in the `demo` directory. To update it:
 
 ## Troubleshooting
 
-### Automatic Publishing Fails
-
-- **NPM_TOKEN not found**:
-  - Verify the secret is named exactly `NPM_TOKEN` in GitHub Secrets
-  - Make sure you created an "Automation" type token, not "Publish" type
-  - The token should have publish permissions
-- **Version already published**:
-  - Check if the version in package.json already exists on npm
-  - Bump to a new version number
-- **Workflow doesn't run**:
-  - Verify the version in package.json actually changed in the commit
-  - Check the Actions tab for any error messages
-  - Ensure repository has Actions enabled in Settings
-
-### Manual npm Publish Fails
+### npm Publish Fails
 
 - **Authentication Error**: Run `npm login` and try again
 - **Version Already Published**: Bump the version number in `package.json`
-- **Access Denied**: Ensure you have permissions for the package
+- **Access Denied**: Ensure you have permissions for the @reform-party scope
 
 ### GitHub Pages Not Updating
 
